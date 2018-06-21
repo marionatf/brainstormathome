@@ -71,7 +71,7 @@ function left(){
             } else {
                 echo "
                     <p>
-                    Brainstorm@home is a research project, based at <a href=www.upf.edu>Pompeu Fabra University</a>,
+                    Brainstorm@home is a research project, based at <a href='https://www.upf.edu/'>Pompeu Fabra University</a>,
                     that uses Internet-connected
                     computers to investigate the molecular basis of brain-related diseases.
                     You can contribute to our research
@@ -81,8 +81,8 @@ function left(){
             }
             echo "
                 <ul>
-                <li> <a href=grib.imim.es/research/gpcr-drug-discovery/research-lines>Our research</a>
-                <li> <a href=grib.imim.es/research/gpcr-drug-discovery/people/?LAB=15>Our team</a>
+                <li> <a href='http://grib.imim.es/research/gpcr-drug-discovery/research-lines'>Our research</a>
+                <li> <a href='http://grib.imim.es/research/gpcr-drug-discovery/people/?LAB=15'>Our team</a>
                 </ul>
             ";
             echo "</ul>";

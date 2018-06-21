@@ -13,7 +13,7 @@ require_once("../inc/util.inc");
 //-------------- Project name and owner
 
 define("PROJECT", "Brainstorm@home");
-define("COPYRIGHT_HOLDER", "Mariona Torrens Fontanals");
+define("COPYRIGHT_HOLDER", "GPCR Drug Discovery group at the Pompeu Fabra University");
 
 //-------------- URLs and directories
 
