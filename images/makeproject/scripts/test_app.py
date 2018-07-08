@@ -9,6 +9,7 @@ coutput_path="/root/shared/results/"
 
 boinc2docker_create_work("claughton/gromacs2018:latest", 
    ["pdb2gmx", "-f", "/root/shared/E2Bwt.pdb", "-o", "/root/shared/results/E2Bwt.gro", "-p", "/root/shared/results/E2Bwt.top", "-ignh", "-ff", "gromos53a6", "-water", "spc"], 
+   appname="shortsim",
    input_files=[("shared/E2Bwt.pdb", open("/root/project/input_files/E2Bwt.pdb").read(), [])],
    )
 
