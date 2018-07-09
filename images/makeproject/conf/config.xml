@@ -6,11 +6,11 @@
         <long_name>brainstorm</long_name>
         <sched_debug_level>3</sched_debug_level>
         <cache_md5_info>1</cache_md5_info>
-        <upload_url>http://brainstormhome.org//brainstorm_cgi/file_upload_handler</upload_url>
+        <upload_url>http://172.20.16.97/brainstorm_cgi/file_upload_handler</upload_url>
         <disable_account_creation>0</disable_account_creation>
         <uldl_dir_fanout>1024</uldl_dir_fanout>
         <disable_web_account_creation>0</disable_web_account_creation>
-        <download_url>http://brainstormhome.org/download</download_url>
+        <download_url>http://172.20.16.97/brainstorm/download</download_url>
         <db_user>root</db_user>
         <log_dir>/root/project/log_brainstorm</log_dir>
         <app_dir>/root/project/apps</app_dir>
