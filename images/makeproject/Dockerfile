@@ -16,6 +16,6 @@ COPY html/inc/bootstrap.inc /root/project/html/inc/bootstrap.inc
 COPY html/user/join.php  /root/project/html/user/join.php
 
 #Apps:
-COPY apps/gpcr_sim_boinc2docker/ /root/project
-RUN boinc2docker_create_app --projhome /root/project /root/project/apps_boinc2docker/gpcr_sim/boinc2docker.yml
+COPY apps/shortsim_boinc2docker/ /root/project
+RUN boinc2docker_create_app --projhome /root/project /root/project/apps_boinc2docker/shortsim/boinc2docker.yml
 

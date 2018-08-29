@@ -104,10 +104,10 @@
             <cmd>sample_trivial_validator -app boinc2docker</cmd>
         </daemon>
        <daemon>
-            <cmd>script_assimilator --app gpcr_sim --script "boinc2docker_assimilator files"</cmd>
+            <cmd>script_assimilator --app shortsim --script "boinc2docker_assimilator files"</cmd>
         </daemon>
         <daemon>
-            <cmd>sample_trivial_validator -app gpcr_sim</cmd>
+            <cmd>sample_trivial_validator -app shortsim</cmd>
         </daemon>
     </daemons>
 </boinc>
