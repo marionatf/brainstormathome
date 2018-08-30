@@ -103,11 +103,18 @@
         <daemon>
             <cmd>sample_trivial_validator -app boinc2docker</cmd>
         </daemon>
-       <daemon>
-            <cmd>script_assimilator --app shortsim --script "boinc2docker_assimilator files"</cmd>
+        <daemon>
+            <cmd>script_assimilator_testsim --app testsim --script "testsim_assimilator files"</cmd>
         </daemon>
         <daemon>
-            <cmd>sample_trivial_validator -app shortsim</cmd>
+            <cmd>sample_trivial_validator_testsim -app testsim</cmd>
+        </daemon>
+        <daemon>
+            <cmd>script_assimilator_shortsim --app shortsim --script "shortsim_assimilator files"</cmd>
+        </daemon>
+        <daemon>
+            <cmd>sample_trivial_validator_shortsim -app shortsim</cmd>
         </daemon>
     </daemons>
+
 </boinc>

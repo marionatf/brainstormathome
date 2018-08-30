@@ -18,4 +18,7 @@ COPY html/user/join.php  /root/project/html/user/join.php
 #Apps:
 COPY apps/shortsim_boinc2docker/ /root/project
 RUN boinc2docker_create_app --projhome /root/project /root/project/apps_boinc2docker/shortsim/boinc2docker.yml
+COPY apps/testsim_boinc2docker/ /root/project
+RUN boinc2docker_create_app --projhome /root/project /root/project/apps_boinc2docker/testsim/boinc2docker.yml
+ 
 
