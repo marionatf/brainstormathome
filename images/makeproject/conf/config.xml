@@ -3,7 +3,7 @@
     <config>
         <upload_dir>/root/project/upload</upload_dir>
         <send_result_abort>1</send_result_abort>
-        <long_name>brainstorm</long_name>
+        <long_name>Brainstorm@home</long_name>
         <sched_debug_level>3</sched_debug_level>
         <cache_md5_info>1</cache_md5_info>
         <upload_url>http://brainstormhome.org/brainstorm_cgi/file_upload_handler</upload_url>
@@ -115,6 +115,11 @@
         <daemon>
             <cmd>sample_trivial_validator_shortsim -app shortsim</cmd>
         </daemon>
+        <daemon>
+            <cmd>script_assimilator_nmda --app nmda --script "nmda_assimilator files"</cmd>
+        </daemon>
+        <daemon>
+            <cmd>sample_trivial_validator_nmda -app nmda</cmd>
+        </daemon>
     </daemons>
-
 </boinc>

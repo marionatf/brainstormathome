@@ -21,4 +21,6 @@ RUN boinc2docker_create_app --projhome /root/project /root/project/apps_boinc2do
 COPY apps/testsim_boinc2docker/ /root/project
 RUN boinc2docker_create_app --projhome /root/project /root/project/apps_boinc2docker/testsim/boinc2docker.yml
  
+COPY apps/nmda_boinc2docker/ /root/project
+RUN boinc2docker_create_app --projhome /root/project /root/project/apps_boinc2docker/nmda/boinc2docker.yml
 
