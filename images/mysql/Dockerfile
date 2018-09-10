@@ -1,1 +1,1 @@
-FROM boinc/server_mysql:2.1.0
+FROM boinc/server_mysql:3.0.1

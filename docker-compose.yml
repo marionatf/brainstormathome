@@ -4,42 +4,47 @@ volumes:
   mysql:
   project:
   results:
+  secrets:
 
 services:
   mysql:
-    build: images/mysql
-    network_mode: bridge
+    build: 
+      context: images/mysql
     volumes:
-     - "mysql:/var/lib/mysql"
-    environment: 
-     - MYSQL_ROOT_PASSWORD=
-     - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+      - "mysql:/var/lib/mysql"
 
   makeproject:
-    build: images/makeproject
-    hostname: boincserver
-    network_mode: bridge
-    links: 
-     - mysql
+    build: 
+      context: images/makeproject
+      args:
+        - BOINC_USER
+        - PROJECT_ROOT
     volumes:
-     - "project:/root/project.dst"
+      - "project:$PROJECT_ROOT.dst"
+      - "secrets:/run/secrets"
+    hostname: makeproject
     environment:
-     - URL_BASE=$URL_BASE
-     - PROJECT=$PROJECT
+      - URL_BASE
+      - PROJECT
 
   apache:
-    build: images/apache
+    build: 
+      context: images/apache
+      args:
+        - BOINC_USER
+        - PROJECT_ROOT
     hostname: $PROJECT
-    network_mode: bridge
-    links:
-     - mysql
+    depends_on:
+      - mysql
     volumes: 
-     - "project:/root/project"
-     - "results:/results"
-     - "/var/run/docker.sock:/var/run/docker.sock"
+      - "project:$PROJECT_ROOT"
+      - "results:/results"
+      - "secrets:/run/secrets"
+      - "/dev/null:/run/secrets/keys/code_sign_private"
+      - "/var/run/docker.sock:/var/run/docker.sock"
     ports: 
-     - "80:80"
+      - "80:80"
     tty: true
     environment:
-     - URL_BASE=$URL_BASE
-     - PROJECT=$PROJECT
+      - URL_BASE
+      - PROJECT

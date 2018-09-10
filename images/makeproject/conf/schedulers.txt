@@ -1,0 +1,2 @@
+<!-- <scheduler>${url_base}/${project}_cgi/cgi</scheduler> -->
+<link rel="boinc_scheduler" href="http://brainstormhome.org/${project}_cgi/cgi">
