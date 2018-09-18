@@ -1,0 +1,22 @@
+from boinc2docker_create_work import boinc2docker_create_work
+
+# boinc2docker_create_work("python:alpine", 
+#  ["python", "-c", "print(open('/root/shared/myinput.txt').read())"], 
+#  input_files=[("shared/myinput.txt", open("/root/project/testinput.txt").read(), [])])
+
+cinput="/root/shared/"
+coutput="/root/shared/results/"
+
+boinc2docker_create_work("carlosred/namd-cpu:latest" , 
+   "namd2 simulation_input.conf",
+   appname="testsim", 
+#   input_files=[("shared/E2Bwt.pdb", open("/home/boincadm/project/input_files/E2Bwt.pdb").read(), [])],
+   )
+
+# boinc2docker_create_work("claughton/gromacs2018:latest", 
+#    ["mdrun", "-deffnm", "/root/shared/E2Bwt-EM-vacuum", "-c", "E2Bwt-EM-vacuum.gro"], 
+#    input_files=[("shared/E2Bwt-EM-vacuum.tpr", open("/root/project/input_files/E2Bwt-EM-vacuum.tpr").read(), [])],
+#    )
+
+
+
