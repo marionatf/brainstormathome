@@ -1,8 +1,4 @@
 from boinc2docker_create_work import boinc2docker_create_work
-from cStringIO import StringIO
-import tarfile
-
-
 
 #--- File with all commands -->  Permission problems
 #boinc2docker_create_work("python:alpine",
@@ -30,7 +26,8 @@ import tarfile
 #               prerun="tar zxvf /root/shared/inputfiles.tgz -C /root/shared",
 #               input_files=[('shared/inputfiles.tgz', "/home/boincadm/project/input_files/test_py/inputfiles.tgz" ,[])],
 #               )
-
+from cStringIO import StringIO
+import tarfile
 
 def add_file_to_tar(tgz,filename,data):
     info = tarfile.TarInfo(filename)
